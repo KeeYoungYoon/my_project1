@@ -3,13 +3,13 @@
 #include <DallasTemperature.h>
 
 #define Time_Period 60 // time period one minute
-#define ONE_WIRE_BUS 2 
+#define ONE_WIRE_BUS 2 //D4
 
 OneWire oneWire(ONE_WIRE_BUS);
 DallasTemperature DS18B20(&oneWire);
 float prevTemp = 0;
 const char* server = "api.thingspeak.com";
-String apiKey ="6NFRRCAYBED0EOWW";
+String apiKey ="6NFRRCAYBED0EOWW";  //my API
 int sent = 0;
 
 void setup() {
@@ -29,8 +29,8 @@ void loop() {
   while(count--)
   delay(1000);
 }
-const char* MY_SSID = "iptime02"; 
-const char* MY_PWD = "11021102";
+const char* MY_SSID = "iptime02";   //my router name
+const char* MY_PWD = "11021102";  //my router password
 void connectWifi()
 {
   Serial.print("Connecting to "+*MY_SSID);
