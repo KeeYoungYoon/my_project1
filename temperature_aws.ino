@@ -8,7 +8,7 @@
 // the number can be activated is case by case
 OneWire oneWire(ONE_WIRE_BUS);
 DallasTemperature sensors(&oneWire);
-String apiKey = "6NFRRCAYBED0EOWW"; // to be changed
+String apiKey = "6NFRRCAYBED0EOWW"; // my thingspeak api
 ESP8266WiFiMulti WiFiMulti;
 
 void setup() {
@@ -18,7 +18,7 @@ void setup() {
   // to be changed
   // We start by connecting to a WiFi network
   // Wifi name and the password
-  WiFiMulti.addAP("iptime02", "11021102");
+  WiFiMulti.addAP("iptime02", "11021102");//router name and password
 
   Serial.println();
   Serial.println();
